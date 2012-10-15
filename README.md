@@ -1,9 +1,9 @@
 <h1>KTU_Tvarkarastis</h1>
 
-Outsourc versija yra skirta programavimo tikslams, bet ši šaka yra skirta žmonėms kurie nori ir gali prisidėti prie projekto.
-Outsourc šaka bus pildoma tik stabiliu kodu, kuris bus naudojamas programuoje. 
+User versija yra skirta vartotojams kurie nori išbandyti aplikaciją nebaigus jos kūrimoproceso.
+Prašome padėti programavimoprocese pranešant apie rastas klaidas ar neskalndumus <a href="https://github.com/PovilasSid/KTU_Tvarkarastis/issues">klaidų skiltyje</a>.
 
-Android aplikacija, kuri leistų betkokio kurso studentui surašius savo tvarkaraštį į XML failą (pagal pavyzdį)  matyti savo tvarkaraštį.
+Android aplikacija, kuri leistų betkokio kurso studentui surašius savo tvarkaraštį į XML failą (pagal pavyzdį)  matyti savo tvarkaraštį. 
 
 <h2>TODO</h2>
 <ul>
