@@ -3,6 +3,7 @@ package com.povilas.sid.ktu.views;
 import com.povilas.sid.ktu.tvarkarastis.R;
 import com.povilas.sid.ktu.tvarkarastis.objects.SheduleColumn;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Color;
@@ -26,7 +27,7 @@ public class LectureListAdapter extends BaseAdapter{
 		inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);;
 	}
 	
-    public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(int position, View convertView, ViewGroup parent) {
 		View v = convertView;
 		
 		if (convertView == null) {
@@ -43,19 +44,29 @@ public class LectureListAdapter extends BaseAdapter{
 		    bt.setText(time);
 		    rt.setText(place);
 		    
-		    StateListDrawable states = new StateListDrawable();
-		    int backgroundColor = Color.parseColor("#"+color);
-		    states.addState(new int[] { -android.R.attr.state_focused,
-		    		android.R.attr.state_pressed,
-		    		-android.R.attr.state_selected,
-		    		-android.R.attr.state_drag_hovered}, new ColorDrawable(backgroundColor)); 
-		    v.setBackground(states);
+		    setStates(v, color);
 		}
 		
 
         // TODO Change color while touched           
         return v;
     }
+	
+	private void setStates(View v, String color){
+	    StateListDrawable states = new StateListDrawable();
+	    int backgroundColor = Color.parseColor("#"+color);
+	    states.addState(new int[] { -android.R.attr.state_focused,
+	    		android.R.attr.state_pressed,
+	    		-android.R.attr.state_selected,
+	    		-android.R.attr.state_drag_hovered}, new ColorDrawable(backgroundColor));
+	    
+	    int sdk = android.os.Build.VERSION.SDK_INT;
+	    if(sdk < android.os.Build.VERSION_CODES.JELLY_BEAN) {
+	        v.setBackgroundDrawable(states);
+	    } else {
+	        v.setBackground(states);
+	    }
+	}
 
 	public int getCount() {
 		return ll.size();
