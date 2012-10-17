@@ -6,6 +6,6 @@ Android aplikacija, kuri leistų betkokio kurso studentui surašius savo tvarkar
 
 <h2>TODO</h2>
 <ul>
-	<li>Apsipręsti ką naudoti duomenų saugojimui atnaujinimui. Yra dvi atlernatyvos Fridge metodas ir native SQLite duombazė.</li>
-	<li>Varttotojo grupių pasirinkimas</li>
+	<li>SQLite duombazės patikrinimas, duomenų parsiuntimas palyginimas, ataujinimas.</li>
+	<li>Vartotojo grupių pasirinkimas</li>
 </ul>
